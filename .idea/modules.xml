@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../popcornhub.iml" filepath="$PROJECT_DIR$/../popcornhub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../PopcornHub.iml" filepath="$PROJECT_DIR$/../PopcornHub.iml" />
     </modules>
   </component>
 </project>
