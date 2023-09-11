@@ -1,0 +1,33 @@
+.card {
+    box-sizing: border-box;
+    margin: 3vh 1vh 2vh 1.7vh;
+    border-radius: 15px;
+    width: calc(20% - 3vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    text-align: center;
+    padding-bottom: 3vh;
+    transition: 0.5s;
+    height: 61.5vh;
+}
+
+.card:hover {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    transform: scale(1.01);
+    height: 63vh;
+    margin: 1vh 1vh 2vh 1.7vh;
+}
+
+.card img {
+    border-radius: 15px 15px 0 0;
+    height: 52vh;
+    width: 16.5vw;
+}
+
+.card a {
+    text-decoration: none;
+    color: lavender;
+}

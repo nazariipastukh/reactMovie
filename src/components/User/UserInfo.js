@@ -1,6 +1,6 @@
 export const UserInfo = () => {
     return (
-        <div>
+        <div style={{color: 'white'}}>
             UserInfo
         </div>
     );

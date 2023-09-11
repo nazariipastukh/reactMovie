@@ -1,8 +1,12 @@
-export const baseURL = process.env.REACT_APP_APP
+const movies = '/discover/movie'
+const genres = '/genre/movie/list'
+const poster = 'https://image.tmdb.org/t/p/w500'
 
 export const urls = {
-    movies: '/discover/movie',
-    movieById: (id) => `/movie/${id}`,
-    genres: '/genre/movie/list',
-    poster: 'https://image.tmdb.org/t/p/w500'
+    movies: {
+        base: movies,
+        byId: (id) => `/${movies}/${id}`
+    },
+    genres,
+    poster
 }

@@ -1,7 +1,9 @@
+import {MovieInfo} from "../../components/Movies/MovieInfo";
+
 export const MovieInfoPage = () => {
     return (
         <div>
-            MovieInfoPage
+            <MovieInfo/>
         </div>
     );
 };

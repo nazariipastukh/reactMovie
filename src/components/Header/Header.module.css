@@ -1,5 +1,48 @@
-.header{
+.header {
     height: 10vh;
     width: 100vw;
-    background-color: black;
+    background-color: #111111;
+    align-items: center;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.header a {
+    margin: 2vh;
+    font-size: 3vh;
+    color: lavender;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header a[class= 'active'] {
+    color: darkgrey;
+}
+
+.header a:hover {
+    transform: scale(1.1);
+}
+
+.headerLogo {
+    width: 33.3vw;
+}
+
+.headerLogo img {
+    margin-left: -0.5vw;
+    height: 8vh
+}
+
+.headerLinks {
+    width: 33.3vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.headerUser {
+    width: 33.3vw;
+    display: flex;
+    justify-content: right;
+    margin-right: 2vw;
 }
