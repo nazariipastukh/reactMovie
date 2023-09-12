@@ -2,5 +2,5 @@ import {apiService} from "./apiService";
 import {urls} from "../constants";
 
 export const moviesService = {
-    getMovies: () => apiService.get(urls.movies.base)
+    getMovies: (page) => apiService.get(urls.movies.base, {params: {page}})
 }

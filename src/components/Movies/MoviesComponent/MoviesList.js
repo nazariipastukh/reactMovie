@@ -1,15 +1,20 @@
-import {useEffect, useState} from "react";
+import {useEffect} from "react";
 import {MoviesListCard} from "../MovieCard/MoviesListCard";
-import {moviesService} from "../../../services";
+import {useDispatch, useSelector} from "react-redux";
+import {movieActions} from "../../../redux";
+import {useSearchParams} from "react-router-dom";
 import styles from './Movies.module.css'
 
 export const MoviesList = () => {
-    const [movies, setMovies] = useState([])
+    const dispatch = useDispatch()
+    const {movies} = useSelector(state => state.movies)
+
+    const [query] = useSearchParams({page: '1'})
+    const page = query.get('page')
 
     useEffect(() => {
-        moviesService.getMovies()
-            .then(response => setMovies(response.data.results))
-    }, []);
+        dispatch(movieActions.getAll({page}))
+    }, [dispatch, page])
 
     return (
         <div className={styles.movieList}>
