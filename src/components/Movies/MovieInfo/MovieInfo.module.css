@@ -1,0 +1,38 @@
+.background {
+    height: 82vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 8vh;
+}
+
+.imageBlock {
+    width: 49.5vw;
+    height: 70vh;
+    margin-right: 2vw;
+}
+
+.imageBlock img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.detailsBlock {
+    width: 35vw;
+    margin: -1vh 0 0 2vw;
+}
+
+.vote {
+    display: flex;
+    align-items: center;
+    margin-top: -1vh;
+}
+
+.vote h3 {
+    margin-left: 2vh;
+}
+
+.overview {
+    width: 33vw;
+    margin-top: -1vh;
+}

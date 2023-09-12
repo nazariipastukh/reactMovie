@@ -10,13 +10,13 @@
     text-align: center;
     padding-bottom: 3vh;
     transition: 0.5s;
-    height: 61.5vh;
+    height: 62vh;
+    cursor: pointer;
 }
 
 .card:hover {
     opacity: 0.6;
     filter: alpha(opacity=60);
-    transform: scale(1.01);
     height: 63vh;
     margin: 1vh 1vh 2vh 1.7vh;
 }
@@ -27,7 +27,7 @@
     width: 16.5vw;
 }
 
-.card a {
+.card p {
     text-decoration: none;
     color: lavender;
 }

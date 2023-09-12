@@ -1,4 +1,4 @@
-import {MovieInfo} from "../../components/Movies/MovieInfo";
+import {MovieInfo} from "../../components";
 
 export const MovieInfoPage = () => {
     return (

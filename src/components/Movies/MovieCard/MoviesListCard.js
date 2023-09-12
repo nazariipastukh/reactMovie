@@ -1,28 +1,28 @@
-import {Link} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {urls} from "../../../constants";
 import {StartRating} from "../StarRating/StartRating";
 import {useState} from "react";
 import styles from './MovieListCard.module.css'
 
-
 export const MoviesListCard = ({movie}) => {
     const {id, title, poster_path, vote_average} = movie
     const [isActive, setIsActive] = useState(false);
+    const navigate = useNavigate()
 
     return (
         <div className={styles.card}
              onMouseEnter={() => setIsActive(true)}
-             onMouseLeave={() => setIsActive(false)}>
+             onMouseLeave={() => setIsActive(false)}
 
-            {isActive && <StartRating vote_average={vote_average}/>}
+             onClick={() => navigate(`/movies/${id}`, {state: {movie}})}>
 
-            <Link to={`/movies/${id}`}>
-                <img src={`${urls.poster}${poster_path}`} alt={'moviePoster'}/>
-            </Link>
+            {isActive && <StartRating vote_average={vote_average}
+                                      starDimension={'16px'}
+                                      divider={2}
+                                      numberOfStars={5}/>}
 
-            <Link to={`/movies/${id}`}>
-                {title}
-            </Link>
+            <img src={`${urls.poster}${poster_path}`} alt={'moviePoster'}/>
+            <p>{title}</p>
         </div>
     );
 };

@@ -5,5 +5,4 @@ export const store = configureStore({
     reducer: {
         movies: moviesReducer
     },
-
 })

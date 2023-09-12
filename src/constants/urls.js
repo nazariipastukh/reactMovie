@@ -4,8 +4,7 @@ const poster = 'https://image.tmdb.org/t/p/w500'
 
 export const urls = {
     movies: {
-        base: movies,
-        byId: (id) => `/${movies}/${id}`
+        base: movies
     },
     genres,
     poster

@@ -1,10 +1,13 @@
 import StarRatings from "react-star-ratings/build/star-ratings";
-import styles from './StarRating.module.css'
 
-export const StartRating = ({vote_average}) => {
+export const StartRating = ({vote_average, starDimension, divider, numberOfStars}) => {
     return (
-        <div className={styles.rating}>
-            <StarRatings rating={vote_average / 2} starDimension="16px" starSpacing="3px"/>
+        <div>
+            <StarRatings rating={vote_average / divider}
+                         numberOfStars={numberOfStars}
+                         starDimension={starDimension}
+                         starSpacing="3px"
+                         starRatedColor={'#352F44'}/>
         </div>
     );
 };
