@@ -1,5 +1,6 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import {moviesService} from "../../services";
+import {loadingActions} from "./loadingSlice";
 
 const initialState = {
     movies: [],
@@ -9,10 +10,17 @@ const getAll = createAsyncThunk(
     'moviesSlice/getAll',
     async ({page}, thunkAPI) => {
         try {
+            thunkAPI.dispatch(loadingActions.setIsLoading(true))
+            await new Promise(resolve => setTimeout(resolve, 500))
+
             const {data} = await moviesService.getMovies(page)
             return data
+
         } catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)
+
+        } finally {
+            thunkAPI.dispatch(loadingActions.setIsLoading(false))
         }
     }
 )

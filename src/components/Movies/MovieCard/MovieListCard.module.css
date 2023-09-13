@@ -14,6 +14,11 @@
     cursor: pointer;
 }
 
+.light {
+    background-color: #9e8fb2;
+    background-image: linear-gradient(315deg, #9e8fb2 0%, #a7acd9 74%);
+}
+
 .card:hover {
     opacity: 0.6;
     filter: alpha(opacity=60);
@@ -30,4 +35,9 @@
 .card p {
     text-decoration: none;
     color: lavender;
+}
+
+.light p {
+    color: #252049;
+    font-weight: bolder;
 }

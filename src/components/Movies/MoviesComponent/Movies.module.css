@@ -6,6 +6,10 @@
     width: 100%;
 }
 
+.movieListLoad {
+    height: 268vh;
+}
+
 .moviesWrap {
     display: flex;
     flex-wrap: wrap;

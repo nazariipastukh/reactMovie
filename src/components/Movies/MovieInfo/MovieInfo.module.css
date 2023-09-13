@@ -1,5 +1,5 @@
 .background {
-    height: 82vh;
+    height: 81vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -7,19 +7,20 @@
 }
 
 .imageBlock {
-    width: 49.5vw;
+    width: 45vw;
     height: 70vh;
-    margin-right: 2vw;
+    margin: 12vh 2vw 0 2vw;
 }
 
 .imageBlock img {
     border-radius: 15px;
     width: 100%;
+    height: 58vh
 }
 
 .detailsBlock {
     width: 35vw;
-    margin: -1vh 0 0 2vw;
+    margin: -5vh 0 0 2vw;
 }
 
 .vote {
@@ -35,4 +36,13 @@
 .overview {
     width: 33vw;
     margin-top: -1vh;
+}
+
+.wrapper {
+    background-color: rgba(148, 142, 199, 0.5);
+    display: flex;
+    justify-content: center;
+    height: 70vh;
+    border-radius: 20px;
+    align-items: center;
 }

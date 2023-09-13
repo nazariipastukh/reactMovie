@@ -1,12 +1,17 @@
 .header {
     height: 10vh;
     width: 100vw;
-    background-color: #111111;
     align-items: center;
     display: flex;
     position: sticky;
     top: 0;
     z-index: 1;
+    background-color: #111111;
+}
+
+.light {
+    background-color: #9e8fb2;
+    background-image: linear-gradient(315deg, #9e8fb2 0%, #a7aad3 74%);
 }
 
 .header a {
@@ -40,9 +45,23 @@
     justify-content: space-evenly;
 }
 
+.lightLinks a {
+    color: #252049;
+}
+
+.lightLinks a[class= 'active'] {
+    color: #96edff;
+}
+
 .headerUser {
-    width: 33.3vw;
+    width: 5vw;
     display: flex;
     justify-content: right;
     margin-right: 2vw;
+}
+
+.switch {
+    width: 29vw;
+    display: flex;
+    justify-content: right;
 }

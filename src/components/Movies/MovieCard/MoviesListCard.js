@@ -2,15 +2,17 @@ import {useNavigate} from "react-router-dom";
 import {urls} from "../../../constants";
 import {StartRating} from "../StarRating/StartRating";
 import {useState} from "react";
+import {useSelector} from "react-redux";
 import styles from './MovieListCard.module.css'
 
 export const MoviesListCard = ({movie}) => {
     const {id, title, poster_path, vote_average} = movie
     const [isActive, setIsActive] = useState(false);
     const navigate = useNavigate()
+    const {themeCheck} = useSelector(state => state.theme)
 
     return (
-        <div className={styles.card}
+        <div className={`${styles.card} ${themeCheck ? '' : styles.light}`}
              onMouseEnter={() => setIsActive(true)}
              onMouseLeave={() => setIsActive(false)}
 

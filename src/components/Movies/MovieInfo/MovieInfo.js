@@ -8,24 +8,27 @@ export const MovieInfo = () => {
 
     return (
         <div className={styles.background}>
-            <div className={styles.imageBlock}>
-                <img src={`${urls.poster}${backdrop_path}`} alt={'moviePoster'}></img>
-            </div>
+            <div className={styles.wrapper}>
 
-            <div className={styles.detailsBlock}>
-                <h1>{title}</h1>
-                <h3>{release_date.slice(0, 4)}</h3>
-
-                <div className={styles.vote}>
-                    <StartRating vote_average={vote_average}
-                                 starDimension={'26px'}
-                                 divider={1}
-                                 numberOfStars={10}/>
-                    <h3>{vote_average}/10</h3>
+                <div className={styles.imageBlock}>
+                    <img src={`${urls.poster}${backdrop_path}`} alt={'moviePoster'}></img>
                 </div>
 
-                <div className={styles.overview}>
-                    <h3>{overview}</h3>
+                <div className={styles.detailsBlock}>
+                    <h1>{title}</h1>
+                    <h3>{release_date.slice(0, 4)}</h3>
+
+                    <div className={styles.vote}>
+                        <StartRating vote_average={vote_average}
+                                     starDimension={'26px'}
+                                     divider={1}
+                                     numberOfStars={10}/>
+                        <h3>{vote_average}/10</h3>
+                    </div>
+
+                    <div className={styles.overview}>
+                        <h3>{overview}</h3>
+                    </div>
                 </div>
             </div>
         </div>
