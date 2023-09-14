@@ -17,7 +17,7 @@ export const Header = () => {
                     <Link to={'/'}>
                         {
                             themeCheck ?
-                                (<img src={'https://imageupload.io/ib/4Kzereh9kJMU4rB_1694439555.jpg'}
+                                (<img src={'https://i.ibb.co/Rv3NtRQ/Screenshot-115.jpg'}
                                       alt={'headerImage'}/>)
                                 :
                                 (<img src={'https://i.ibb.co/ypTVCZR/Screenshot-116-removebg-preview.png'}

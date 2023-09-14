@@ -1,20 +1,19 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
-import {moviesService} from "../../services";
+import {genresService} from "../../services";
 import {loadingActions} from "./loadingSlice";
 
 const initialState = {
-    movies: [],
-    pages: 500
+    genres: [],
 }
 
 const getAll = createAsyncThunk(
-    'moviesSlice/getAll',
-    async ({page}, thunkAPI) => {
+    'genresSlice/getAll',
+    async (_, thunkAPI) => {
         try {
             thunkAPI.dispatch(loadingActions.setIsLoading(true))
             await new Promise(resolve => setTimeout(resolve, 500))
 
-            const {data} = await moviesService.getMovies(page)
+            const {data} = await genresService.getGenres()
             return data
         } catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)
@@ -24,25 +23,25 @@ const getAll = createAsyncThunk(
     }
 )
 
-const moviesSlice = createSlice({
-    name: 'moviesSlice',
+const genresSlice = createSlice({
+    name: 'genresSlice',
     initialState,
     reducers: {},
     extraReducers: builder => builder
         .addCase(getAll.fulfilled, (state, action) => {
-            const {results} = action.payload
-            state.movies = results
+            const {genres} = action.payload
+            state.genres = genres
         })
 })
 
-const {reducer: moviesReducer, actions} = moviesSlice
+const {reducer: genresReducer, actions} = genresSlice
 
-const movieActions = {
+const genresActions = {
     ...actions,
     getAll
 }
 
 export {
-    moviesReducer,
-    movieActions
+    genresReducer,
+    genresActions
 }

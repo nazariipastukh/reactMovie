@@ -1,3 +1,5 @@
 export * from './moviesSlice'
 export * from './themeSlice'
 export * from './loadingSlice'
+export * from './genresSlice'
+export * from './moviesByGenreSlice'

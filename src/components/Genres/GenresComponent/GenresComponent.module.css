@@ -1,0 +1,17 @@
+.genresList {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 2vh 0 0 0
+}
+
+.genres {
+    background-color: rgba(148, 142, 199, 0.5);
+    width: 81.3vw;
+    height: 15vh;
+    display: flex;
+    border-radius: 15px;
+    padding: 15px 0 20px 100px;
+    flex-wrap: wrap;
+    margin-right: 1vw;
+}
