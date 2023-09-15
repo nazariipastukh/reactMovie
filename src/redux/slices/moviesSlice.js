@@ -12,7 +12,7 @@ const getAll = createAsyncThunk(
     async ({page}, thunkAPI) => {
         try {
             thunkAPI.dispatch(loadingActions.setIsLoading(true))
-            await new Promise(resolve => setTimeout(resolve, 500))
+
 
             const {data} = await moviesService.getMovies(page)
             return data

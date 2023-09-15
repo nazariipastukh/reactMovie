@@ -12,7 +12,7 @@ const getMoviesByGenre = createAsyncThunk(
     async ({id, page}, thunkAPI) => {
         try {
             thunkAPI.dispatch(loadingActions.setIsLoading(true))
-            await new Promise(resolve => setTimeout(resolve, 500))
+
 
             const {data} = await genresService.getByGenre(id, page)
             return data

@@ -10,7 +10,7 @@ export const PaginationComponent = ({pages}) => {
         setQuery({page: newPage.toString()});
     };
 
-    if(pages > 500){
+    if (pages > 500) {
         pages = 500
     }
 

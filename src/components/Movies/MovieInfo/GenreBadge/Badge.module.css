@@ -1,0 +1,13 @@
+.badge {
+    height: 3vh;
+    background-color: rgba(148, 142, 199, 0.5);
+    margin: 1vh 1vh 1vh 0;
+    padding: 1vh;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.badge:hover {
+    transform: scale(1.1);
+}

@@ -16,7 +16,7 @@ export const MoviesListCard = ({movie}) => {
              onMouseEnter={() => setIsActive(true)}
              onMouseLeave={() => setIsActive(false)}
 
-             onClick={() => navigate(`/movies/${id}`, {state: {movie}})}>
+             onClick={() => navigate(`/movies/${id}`)}>
 
             {isActive && <StartRating vote_average={vote_average}
                                       starDimension={'16px'}
