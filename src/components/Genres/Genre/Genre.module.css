@@ -7,6 +7,25 @@
     text-align: center;
 }
 
+.genre a {
+    text-decoration: none;
+    color: lavender;
+}
+
 .genre:hover {
     transform: scale(1.1);
+}
+
+.genre a[class='active'] {
+    color: #0d324d;
+    font-weight: bold;
+}
+
+.lightGenre a {
+    color: #252049;
+}
+
+.lightGenre a[class='active'] {
+    color: #96edff;
+    font-weight: bold;
 }

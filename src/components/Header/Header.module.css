@@ -21,6 +21,7 @@
 
 .header a[class= 'active'] {
     color: darkgrey;
+    font-weight: bold;
 }
 
 .header a:hover {
@@ -48,6 +49,7 @@
 
 .lightLinks a[class= 'active'] {
     color: #96edff;
+    font-weight: bold;
 }
 
 .headerUser {

@@ -1,13 +1,14 @@
-import {useNavigate} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import {useSelector} from "react-redux";
 import styles from './Genre.module.css'
 
 export const Genre = ({genre}) => {
     const {id, name} = genre
-    const navigate = useNavigate()
+    const {themeCheck} = useSelector(state => state.theme)
 
     return (
-        <div className={styles.genre} onClick={() => navigate(`/genres/${id}`)}>
-            {name}
+        <div className={`${styles.genre} ${themeCheck ? '' : styles.lightGenre}`}>
+            <NavLink to={`/genres/${id}`}>{name}</NavLink>
         </div>
     );
 };
