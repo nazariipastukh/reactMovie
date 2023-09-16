@@ -29,7 +29,7 @@
 }
 
 .headerLogo {
-    width: 33.3vw;
+    width: 10vw;
 }
 
 .headerLogo img {
@@ -38,9 +38,10 @@
 }
 
 .headerLinks {
-    width: 33.3vw;
+    width: 50vw;
     display: flex;
     justify-content: space-evenly;
+    margin-left: 26.5vw;
 }
 
 .lightLinks a {
@@ -56,11 +57,15 @@
     width: 5vw;
     display: flex;
     justify-content: right;
-    margin-right: 2vw;
+    margin: 0 2vw 0 1vw;
 }
 
 .switch {
-    width: 29vw;
+    width: 10vw;
     display: flex;
     justify-content: right;
+}
+
+.search {
+    margin-left: 6.5vw;
 }

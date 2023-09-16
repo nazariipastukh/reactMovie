@@ -7,6 +7,7 @@ import {
     movieByGenreReducer,
     movieByIdReducer
 } from './slices'
+import {searchReducer} from "./slices/searchSlice";
 
 
 export const store = configureStore({
@@ -16,6 +17,7 @@ export const store = configureStore({
         loading: loadingReducer,
         genres: genresReducer,
         moviesByGenre: movieByGenreReducer,
-        movieById: movieByIdReducer
+        movieById: movieByIdReducer,
+        search: searchReducer
     },
 })

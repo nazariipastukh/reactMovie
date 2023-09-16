@@ -1,0 +1,57 @@
+.input {
+    border-radius: 10px 0 0 10px;
+    border: 1px grey solid;
+    padding: 5px 5px 5px 10px;
+    background-color: #111111;
+    width: 15vw;
+    color: lavenderblush;
+    transition: 0.5s;
+}
+
+.input:hover {
+    background-color: #29323c;
+}
+
+.lightInput {
+    border-radius: 10px 0 0 10px;
+    border: 1px lavender solid;
+    padding: 5px 5px 5px 10px;
+    background: none;
+    width: 15vw;
+    color: lavenderblush;
+    transition: 0.5s;
+}
+
+.lightInput:hover {
+    background-color: #9e8fb2;
+}
+
+.lightInput::placeholder {
+    color: lavenderblush;
+}
+
+.button {
+    border-radius: 0 10px 10px 0;
+    border: 1px grey solid;
+    background-color: #111111;
+    color: lavenderblush;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.button:hover {
+    background-color: #29323c;
+}
+
+.lightButton {
+    border-radius: 0 10px 10px 0;
+    border: 1px lavender solid;
+    background: none;
+    color: lavenderblush;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.lightButton:hover {
+    background-color: #9e8fb2;
+}

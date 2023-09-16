@@ -1,6 +1,7 @@
 .movieList {
     display: flex;
     justify-content: center;
+    min-height: 89vh;
     height: 100%;
     width: 100%;
 }

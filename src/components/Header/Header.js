@@ -4,6 +4,7 @@ import {Switch, LinearProgress, Box} from "@mui/material";
 import {themeActions} from "../../redux/slices";
 import {UserInfo} from "../User";
 import styles from './Header.module.css'
+import {SearchComponent} from "../Search";
 
 export const Header = () => {
     const dispatch = useDispatch()
@@ -29,6 +30,9 @@ export const Header = () => {
                     <NavLink to={'/'}>Main Page</NavLink>
                     <NavLink to={'/movies'}>Movies</NavLink>
                     <NavLink to={'/genres'}>Genres</NavLink>
+                </div>
+                <div className={styles.search}>
+                    <SearchComponent/>
                 </div>
                 <div className={styles.switch}>
                     <Switch className={styles.switch}
