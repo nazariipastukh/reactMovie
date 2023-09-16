@@ -1,0 +1,29 @@
+.actor {
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    text-align: center;
+    align-items: center;
+    margin: 2vh 0
+}
+
+.photo {
+    height: 14vh;
+    width: 6vw;
+    border-radius: 25px;
+    transition: 0.5s;
+    margin-bottom: 1vh;
+}
+
+.photo:hover {
+    transform: scale(1.2);
+    border-radius: 10px;
+}
+
+p {
+    margin: 0
+}
+
+.name {
+    min-height: 5vh
+}

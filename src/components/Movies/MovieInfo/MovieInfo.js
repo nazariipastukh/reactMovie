@@ -3,17 +3,24 @@ import {urls} from "../../../constants";
 import {GenreBadge, StartRating} from "../../../components";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {movieByIdActions} from "../../../redux/slices";
+import {castActions, movieByIdActions} from "../../../redux/slices";
 import styles from './MovieInfo.module.css';
+import {ActorComponent} from "./Cast/ActorComponent";
 
 export const MovieInfo = () => {
     const {id} = useParams();
     const dispatch = useDispatch()
     const {movieById} = useSelector(state => state.movieById)
     const {title, release_date, vote_average, overview, genres, backdrop_path} = movieById || {};
+    const {cast, crew} = useSelector(state => state.cast)
+
 
     useEffect(() => {
         dispatch(movieByIdActions.getMovieById(id))
+    }, [dispatch, id])
+
+    useEffect(() => {
+        dispatch(castActions.getCredits(id))
     }, [dispatch, id])
 
     return (
@@ -43,6 +50,24 @@ export const MovieInfo = () => {
                                 genres.map(genre => <GenreBadge key={genre.id} genre={genre}/>)
                             }
                         </div>
+                    </div>
+                </div>
+            )}
+            {movieById && (
+                <div>
+                    <h2 className={styles.desc}>Main cast</h2>
+                    <div className={styles.castWrap}>
+                        {
+                            cast.slice(0, 10).map(actor => <ActorComponent actor={actor} key={actor.id}/>)
+
+                        }
+                    </div>
+                    <h2 className={styles.desc}>Main crew</h2>
+                    <div className={styles.castWrap}>
+                        {
+                            crew.slice(0, 10).map(worker => <ActorComponent actor={worker} key={worker.id}/>)
+
+                        }
                     </div>
                 </div>
             )}

@@ -1,36 +1,25 @@
 import {useForm} from "react-hook-form";
 import {searchService} from "../../services";
-import {useNavigate, useSearchParams} from "react-router-dom";
-import styles from "./Search.module.css";
-import {useDispatch, useSelector} from "react-redux";
-import {loadingActions} from "../../redux/slices"; // Updated import
+import {useNavigate} from "react-router-dom";
+import styles from './Search.module.css'
+import {useSelector} from "react-redux";
 
 export const SearchComponent = () => {
     const {reset, register, handleSubmit, formState: {isValid}} = useForm({
         mode: "onChange"
-    });
-
-    const navigate = useNavigate();
+    })
+    const navigate = useNavigate()
     const {themeCheck} = useSelector(state => state.theme);
-    const dispatch = useDispatch();
 
-    const [query] = useSearchParams({page: '1'})
-    const page = query.get('page')
-
-    const save = async (formData) => {
+    const save = (formData) => {
         const inputValue = formData.value;
 
-        try {
-            dispatch(loadingActions.setIsLoading(true));
-            const response = await searchService.getSearchResult(inputValue, page);
-            const searchDataString = response.data;
-            navigate(`/search/${inputValue}`, {state: {searchData: searchDataString}});
-            reset();
-        } catch (error) {
-            console.log(error)
-        } finally {
-            dispatch(loadingActions.setIsLoading(false));
-        }
+        searchService.getSearchResult(inputValue)
+            .then((response) => {
+                const searchDataString = response.data.results
+                navigate(`/search/${inputValue}`, {state: {searchData: searchDataString}});
+                reset()
+            })
     };
 
     return (
@@ -45,4 +34,4 @@ export const SearchComponent = () => {
             </div>
         </form>
     );
-}
+};

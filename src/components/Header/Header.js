@@ -18,10 +18,10 @@ export const Header = () => {
                     <Link to={'/'}>
                         {
                             themeCheck ?
-                                (<img src={'https://i.ibb.co/Rv3NtRQ/Screenshot-115.jpg'}
+                                (<img src={'https://i.ibb.co/PNNrv37/Screenshot-434.jpg'}
                                       alt={'headerImage'}/>)
                                 :
-                                (<img src={'https://i.ibb.co/ypTVCZR/Screenshot-116-removebg-preview.png'}
+                                (<img src={'https://i.ibb.co/LPWhZL0/Screenshot-433-removebg-preview.png'}
                                       alt={'headerImage'}/>)
                         }
                     </Link>

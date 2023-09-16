@@ -6,9 +6,9 @@ import {
     genresReducer,
     movieByGenreReducer,
     movieByIdReducer,
+    castReducer
     // searchReducer
 } from './slices'
-
 
 export const store = configureStore({
     reducer: {
@@ -18,6 +18,7 @@ export const store = configureStore({
         genres: genresReducer,
         moviesByGenre: movieByGenreReducer,
         movieById: movieByIdReducer,
+        cast: castReducer
         // search: searchReducer
     },
 })
