@@ -1,11 +1,10 @@
-import {useLocation} from "react-router-dom";
+// import {useLocation} from "react-router-dom";
 import {MoviesListCard} from "../Movies";
 import {useSelector} from "react-redux";
 import styles from "../Movies/MoviesComponent/Movies.module.css";
 
-export const SearchResults = () => {
-    const location = useLocation();
-    const searchData = location.state?.searchData
+export const SearchResults = ({searchData}) => {
+
     const {isLoading} = useSelector(state => state.loading)
 
     return (

@@ -12,7 +12,6 @@ const getAll = createAsyncThunk(
         try {
             thunkAPI.dispatch(loadingActions.setIsLoading(true))
 
-
             const {data} = await genresService.getGenres()
             return data
         } catch (e) {
