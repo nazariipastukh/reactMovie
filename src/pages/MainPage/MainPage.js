@@ -1,7 +1,9 @@
+import {MainPageComponent} from "../../components";
+
 export const MainPage = () => {
     return (
         <div>
-            MainPage
+            <MainPageComponent/>
         </div>
     );
 };

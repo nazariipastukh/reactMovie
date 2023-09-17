@@ -1,6 +1,6 @@
 export * from './apiService'
-export * from './actorsService'
 export * from './genresService'
 export * from './searchService'
 export * from './moviesService'
 export * from './castService'
+export * from './mainPageService'

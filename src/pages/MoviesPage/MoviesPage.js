@@ -5,7 +5,6 @@ import {useSelector} from "react-redux";
 export const MoviesPage = () => {
     const {pages} = useSelector(state => state.movies)
 
-
     return (
         <div>
             <MoviesList/>

@@ -3,8 +3,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {Switch, LinearProgress, Box} from "@mui/material";
 import {themeActions} from "../../redux/slices";
 import {UserInfo} from "../User";
-import styles from './Header.module.css'
 import {SearchComponent} from "../Search";
+import styles from './Header.module.css'
 
 export const Header = () => {
     const dispatch = useDispatch()

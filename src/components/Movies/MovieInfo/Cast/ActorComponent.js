@@ -1,8 +1,9 @@
-import styles from './Actor.module.css'
 import {urls} from "../../../../constants";
+import styles from './Actor.module.css'
 
-export const ActorComponent = ({actor}) => {
-    const {name, character, profile_path, job} = actor
+export const ActorComponent = ({person}) => {
+    const {name, character, profile_path, job} = person
+
     return (
         <div className={styles.actor}>
             {

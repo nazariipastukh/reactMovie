@@ -1,8 +1,8 @@
 .card {
     box-sizing: border-box;
-    margin: 3vh 1vh 2vh 1.7vh;
+    margin: 3vh 1vh 1vh 1.7vh;
     border-radius: 15px;
-    width: calc(20% - 3vh);
+    width: calc(13% - 4vh);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,7 +10,7 @@
     text-align: center;
     padding-bottom: 3vh;
     transition: 0.5s;
-    height: 61vh;
+    height: 30vh;
     cursor: pointer;
 }
 
@@ -22,19 +22,21 @@
 .card:hover {
     opacity: 0.6;
     filter: alpha(opacity=60);
-    height: 63vh;
-    margin: 1vh 1vh 0 1.7vh;
+    height: 34vh;
+    margin: 1vh 1vh 1vh 1.7vh;
 }
 
 .card img {
     border-radius: 15px 15px 0 0;
-    height: 52vh;
-    width: 16.5vw;
+    height: 24vh;
+    width: 9.5vw;
 }
 
 .card p {
+    font-size: 12px;
     text-decoration: none;
     color: lavender;
+    margin: 0 1vh
 }
 
 .light p {

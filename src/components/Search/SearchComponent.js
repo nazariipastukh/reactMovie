@@ -1,8 +1,9 @@
 import {useForm} from "react-hook-form";
 import {searchService} from "../../services";
 import {useNavigate} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {loadingActions} from "../../redux/slices";
 import styles from './Search.module.css'
-import {useSelector} from "react-redux";
 
 export const SearchComponent = () => {
     const {reset, register, handleSubmit, formState: {isValid}} = useForm({
@@ -10,16 +11,23 @@ export const SearchComponent = () => {
     })
     const navigate = useNavigate()
     const {themeCheck} = useSelector(state => state.theme);
+    const dispatch = useDispatch()
 
-    const save = (formData) => {
+    const save = async (formData) => {
         const inputValue = formData.value;
+        try {
+            dispatch(loadingActions.setIsLoading(true))
 
-        searchService.getSearchResult(inputValue)
-            .then((response) => {
-                const searchDataString = response.data.results
-                navigate(`/search/${inputValue}`, {state: {searchData: searchDataString}});
-                reset()
-            })
+            const response = await searchService.getSearchResult(inputValue);
+            const searchDataString = response.data.results;
+            navigate(`/search/${inputValue}`, {state: {searchData: searchDataString}});
+
+            reset();
+        } catch (error) {
+            console.log(error)
+        } finally {
+            dispatch(loadingActions.setIsLoading(false))
+        }
     };
 
     return (

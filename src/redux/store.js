@@ -6,7 +6,8 @@ import {
     genresReducer,
     movieByGenreReducer,
     movieByIdReducer,
-    castReducer
+    castReducer,
+    mainPageReducer
     // searchReducer
 } from './slices'
 
@@ -18,7 +19,8 @@ export const store = configureStore({
         genres: genresReducer,
         moviesByGenre: movieByGenreReducer,
         movieById: movieByIdReducer,
-        cast: castReducer
+        cast: castReducer,
+        mainPageData: mainPageReducer
         // search: searchReducer
     },
 })

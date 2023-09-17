@@ -4,8 +4,8 @@ import {GenreBadge, StartRating} from "../../../components";
 import {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {castActions, movieByIdActions} from "../../../redux/slices";
-import styles from './MovieInfo.module.css';
 import {ActorComponent} from "./Cast/ActorComponent";
+import styles from './MovieInfo.module.css';
 
 export const MovieInfo = () => {
     const {id} = useParams();
@@ -58,15 +58,13 @@ export const MovieInfo = () => {
                     <h2 className={styles.desc}>Main cast</h2>
                     <div className={styles.castWrap}>
                         {
-                            cast.slice(0, 10).map(actor => <ActorComponent actor={actor} key={actor.id}/>)
-
+                            cast.slice(0, 10).map(actor => <ActorComponent person={actor} key={actor.id}/>)
                         }
                     </div>
                     <h2 className={styles.desc}>Main crew</h2>
                     <div className={styles.castWrap}>
                         {
-                            crew.slice(0, 10).map(worker => <ActorComponent actor={worker} key={worker.id}/>)
-
+                            crew.slice(0, 10).map(worker => <ActorComponent person={worker} key={worker.id}/>)
                         }
                     </div>
                 </div>

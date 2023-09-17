@@ -3,6 +3,7 @@ import {useSelector} from "react-redux";
 
 export const StartRating = ({vote_average, starDimension, divider, numberOfStars}) => {
     const {themeCheck} = useSelector(store => store.theme)
+
     return (
         <div>
             <StarRatings rating={vote_average / divider}
