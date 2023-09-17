@@ -13,7 +13,6 @@ const getAll = createAsyncThunk(
         try {
             thunkAPI.dispatch(loadingActions.setIsLoading(true))
 
-
             const {data} = await moviesService.getMovies(page)
             return data
         } catch (e) {

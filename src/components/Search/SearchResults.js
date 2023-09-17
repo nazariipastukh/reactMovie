@@ -16,7 +16,7 @@ export const SearchResults = () => {
                 }
                 {searchData.length === 0 && (
                     <div style={{height: '89vh'}}>
-                        <h1>Data not found or invalid format</h1>
+                        <h1>Movie not found</h1>
                     </div>
                 )}
             </div>

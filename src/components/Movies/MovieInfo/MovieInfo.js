@@ -14,7 +14,6 @@ export const MovieInfo = () => {
     const {title, release_date, vote_average, overview, genres, backdrop_path} = movieById || {};
     const {cast, crew} = useSelector(state => state.cast)
 
-
     useEffect(() => {
         dispatch(movieByIdActions.getMovieById(id))
     }, [dispatch, id])

@@ -40,9 +40,11 @@ export const Header = () => {
                             onClick={() => dispatch(themeActions.changeThemeCheck())}
                     />
                 </div>
-                <div className={styles.headerUser}>
-                    <UserInfo/>
-                </div>
+                <a href="https://github.com/nazariipastukh" target={"_blank"} rel="noreferrer">
+                    <div className={styles.headerUser}>
+                        <UserInfo/>
+                    </div>
+                </a>
             </div>
             {
                 isLoading ? (
